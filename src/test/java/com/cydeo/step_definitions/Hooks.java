@@ -17,6 +17,26 @@ public class Hooks {
     public void setupScenario(){
         System.out.println("===Setting up browser using cucumber @Before===");
     }
+    /*
+    we can create more than one @Before, @After, @BeforeStep, @AfterStep
+    If we have multiple versions of the same annotation,
+    we can prioritize the running order using the "order" keyword.
+    We should write like this @Before (order = 1)
+
+    We can also specify which annotation is running for which scenarios or features using @TAGS.
+    If I want some scenario/feature to have pre- /post- conditions, I can use certain @TAG,
+    and pass the same @TAG into the annotation in Hooks class.
+     */
+
+    @Before ("@login")
+    public void setupScenarioForLogins(){
+        System.out.println("===This will only apply to scenarios with @login tag===");
+    }
+
+    @Before ("@db")
+    public void setupForDatabaseScenarios(){
+        System.out.println("===This will only apply to scenarios with @db tag===");
+    }
 
     //import from io.cucumber.java not from junit
     @After
