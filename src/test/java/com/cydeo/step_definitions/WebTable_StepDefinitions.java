@@ -9,6 +9,8 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
+import java.util.Map;
+
 public class WebTable_StepDefinitions {
 
     WebTableLoginPage webTableLoginPage = new WebTableLoginPage();
@@ -42,10 +44,10 @@ public class WebTable_StepDefinitions {
         webTableLoginPage.loginButton.click();
 
     }
-    @Then("user should see url contains order")
-    public void user_should_see_url_contains_order() {
+    @Then("user should see url contains orders")
+    public void user_should_see_url_contains_orders() {
 
-        //BrowserUtils.verifyUrlContains("orders"); or
+        //BrowserUtils.verifyURLContains("orders"); //or
 
         Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("orders"));
 
@@ -61,5 +63,19 @@ public class WebTable_StepDefinitions {
         //Or we can use login() method which we created inside WebTableLoginPage class
         webTableLoginPage.login(username, pw);
     }
+
+    @When("User enters below credentials")
+    public void user_enters_below_credentials(Map<String, String> credentials) {
+
+       // webTableLoginPage.inputUsername.sendKeys(credentials.get("username"));
+       // webTableLoginPage.inputPassword.sendKeys(credentials.get("password"));
+       // webTableLoginPage.loginButton.click();
+
+        //we can call our login() utility method (inside WebTableLoginPage class) and pass values from map
+        webTableLoginPage.login(credentials.get("username"), credentials.get("password") );
+    }
+
+
+
 
 }

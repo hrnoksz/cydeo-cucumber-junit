@@ -64,7 +64,7 @@ public class BrowserUtils {
      * This method will verify if the current URL contains expected value
      * @param expectedInURL
      */
-    public static void verifyUrlContains(String expectedInURL){
+    public static void verifyURLContains(String expectedInURL){
         Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains(expectedInURL));
     }
 
@@ -72,7 +72,7 @@ public class BrowserUtils {
      * This method will accept a dropdown as a WebElement
      * and return all the options' text in a List of String.
      * @param dropdownElement
-     * @return
+     * @return List<String> actualMonthsAsString
      */
 
     public static List<String> dropdownOptionsAsString(WebElement dropdownElement){
