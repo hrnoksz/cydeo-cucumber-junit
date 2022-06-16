@@ -52,11 +52,14 @@ public class WebTable_StepDefinitions {
     }
 
     @When("user enters username {string} password {string} and logins")
-    public void user_enters_username_password_and_logins(String username, String pwd) {
-
-        webTableLoginPage.inputUsername.sendKeys(username);
-        webTableLoginPage.inputPassword.sendKeys(pwd);
+    public void user_enters_username_password_and_logins(String username, String pw) {
+        /*
+        webTableLoginPage.inputUsername.sendKeys("Test");
+        webTableLoginPage.inputPassword.sendKeys("Tester");
         webTableLoginPage.loginButton.click();
+         */
+        //Or we can use login() method which we created inside WebTableLoginPage class
+        webTableLoginPage.login(username, pw);
     }
 
 }
