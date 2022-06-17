@@ -321,7 +321,6 @@ public class BrowserUtils {
         }
     }
 
-
     /**
      * Clicks on an element using JavaScript
      *
@@ -332,14 +331,14 @@ public class BrowserUtils {
         ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].click();", element);
     }
 
-
     /**
      * Scrolls down to an element using JavaScript
      *
      * @param element
      */
     public static void scrollToElement(WebElement element) {
-        ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
+        ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);",
+                element);
     }
 
     /**
@@ -359,7 +358,8 @@ public class BrowserUtils {
      * @param attributeValue
      */
     public static void setAttribute(WebElement element, String attributeName, String attributeValue) {
-        ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].setAttribute(arguments[1], arguments[2]);", element, attributeName, attributeValue);
+        ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].setAttribute(arguments[1], " +
+                "arguments[2]);", element, attributeName, attributeValue);
     }
 
     /**
@@ -367,9 +367,11 @@ public class BrowserUtils {
      * @param element
      */
     public static void highlight(WebElement element) {
-        ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", element);
+        ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].setAttribute('style', " +
+                "'background: yellow; border: 2px solid red;');", element);
         waitFor(1);
-        ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].removeAttribute('style', 'background: yellow; border: 2px solid red;');", element);
+        ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].removeAttribute('style', " +
+                "'background: yellow; border: 2px solid red;');", element);
     }
 
     /**
