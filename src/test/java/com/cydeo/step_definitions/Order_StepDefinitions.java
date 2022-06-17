@@ -33,10 +33,16 @@ public class Order_StepDefinitions {
         Select select = new Select(orderPage.productDropdown);
         select.selectByVisibleText(string);
     }
-    @When("user enters quantity {string}")
-    public void user_enters_quantity(String string) {
+    @When("user enters quantity {int}")
+    public void user_enters_quantity(int arg0) {
 
+        //sendKeys() method only accepts String
+        //Therefore, we concatenate int value with empty string.
+        // Or send String.valueOf(int)
+        orderPage.inputQuantity.sendKeys(arg0+"");
+        orderPage.inputQuantity.sendKeys(String.valueOf(arg0));
     }
+
     @When("user enters customer name {string}")
     public void user_enters_customer_name(String string) {
 
