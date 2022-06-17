@@ -40,4 +40,7 @@ public class OrderPage extends BasePage {
 
     @FindBy(name = "cardNo")
     public WebElement cardNo;
+
+    @FindBy(name = "cardExp")
+    public WebElement cardExp;
 }
