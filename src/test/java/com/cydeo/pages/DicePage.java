@@ -14,6 +14,9 @@ public class DicePage {
     public WebElement keywordBox;
 
     @FindBy(id = "google-location-search")
-    public WebElement locationBox;
+    public WebElement zipCodeBox;
+
+    @FindBy(id = "totalJobCount")
+    public WebElement totalJobs;
 
 }
