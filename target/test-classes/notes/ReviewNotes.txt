@@ -1,0 +1,14 @@
+Gherkin Language
+Given--> is used for pre-condition
+        user is on the home page
+        user is a frequent flier
+        user is log in as instructor
+
+When/And---> steps/actions
+        user enters email
+        user searches for bla bla...
+
+Then ---> verification steps
+    user
+
+DryRun = true / false
