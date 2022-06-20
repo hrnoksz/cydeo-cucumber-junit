@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/cydeo/step_definitions",
         dryRun = false, // to get snippets from the console, dryRun must be true
-        tags = "@smoke"
+        tags = "@wip"
 )
 
 public class CukesRunner {
