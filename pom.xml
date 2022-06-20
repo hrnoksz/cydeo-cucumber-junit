@@ -50,6 +50,12 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>me.jvt.cucumber</groupId>
+            <artifactId>reporting-plugin</artifactId>
+            <version>7.3.0</version>
+        </dependency>
+
         <!--If you want to get rid of SLF4J Failed to load message from the console -->
         <dependency>
             <groupId>org.slf4j</groupId>
