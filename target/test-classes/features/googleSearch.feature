@@ -18,3 +18,24 @@ Feature: Google search functionality
     When user types "apple" and clicks enter
     Then user sees "apple" in the google title
 
+
+  Scenario: Data Driven Testing Format preparation
+    Given user is on Google search page
+    When user types "capital of Australia" and clicks enter
+    And user should see "Kanberra" in the result
+
+
+  Scenario Outline: Search functionality in a Data Driven Testing Format
+    Given user is on Google search page
+    When user types "capital of <country>" and clicks enter
+    Then user should see "<capital>" in the result
+    Examples:
+      | country | capital       |
+      | Turkey  | Ankara        |
+      | USA     | Washington DC |
+      | Ukraine | Kyiv          |
+      | Germany | Berlin        |
+      | UK      | London        |
+      | Latvia  | Riga          |
+      | Greece  | Athens        |
+

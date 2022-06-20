@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         plugin = "html:target/cucumber-report.html",
         features = "src/test/resources/features",
         glue = "com/cydeo/step_definitions",
-        dryRun = true, // to get snippets from the console, dryRun must be true
+        dryRun = false, // to get snippets from the console, dryRun must be true
         tags = "@wip"
 )
 
