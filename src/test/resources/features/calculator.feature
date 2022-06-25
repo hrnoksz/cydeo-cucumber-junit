@@ -3,13 +3,14 @@ Feature: Calculator Tests
   Background:
     Given user is on calculator page
 
+  @wip
   Scenario: Test Adding
     When user clicks "5" on calculator
     And user clicks "+" on calculator
     And user clicks "5" on calculator
     Then result "10" should be displayed
 
-
+  @wip
   Scenario: Test Subtracting
     When user clicks "9" on calculator
     And user clicks "–" on calculator
