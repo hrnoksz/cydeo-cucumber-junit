@@ -3,6 +3,7 @@ Feature: Calculator Tests
   Background:
     Given user is on calculator page
 
+
   Scenario: Test Adding
     When user clicks "5" on calculator
     And user clicks "+" on calculator
